@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jaturapat Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        
+        .row.content {
+            height: 1500px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            background-color: lightgrey;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        #footer {
+            background-color: gold;
+            color: black;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+        #bg {
+            background-color: lightgreen;
+            color: saddlebrown;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Jaturapat Blog</h4>
+                <h5>58160165</h5>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#section1">Home</a></li>
+                    <li><a href="#section2">การใช้งาน Grid</a>
+                    </li>
+                    <li><a href="#section3">การใช้งาน Form</a></li>
+                </ul><br>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Blog..">
+                    <span class="input-group-btn">
+          <button class="btn btn-default" id ="bg" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <h5 id="footer">RECENT POSTS</h5>
+                <hr>
+                <h3>Bootstrap : การใช้งาน Grid </h3>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by Jaturapat Cheunjaratsup, Feb 1, 2017.</h5>
+                <h5><span class="label label-success">Grid</span></h5><br>
+                <div class="alert alert-success">
+                    <strong><h3>Grid System ?</h3></strong>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp; Grid System เป็น Layout ที่คอยควบคุมวัตถุต่างๆ บนหน้าเว็บไซต์ให้แสดงผลได้อย่างถูกต้องตามหลัก box layout ซึ่งจะส่งผลดีต่อการเขียนหนึ่งหน้าเว็บไซต์ แต่สามารถใช้ร่วมกับอุปกรณ์ทุกขนาดหน้าจอ บนหน้าจอขนาดใหญ่ก็อาจจะดูดีขึ้น
+                        แต่บนหน้าจอเล็ก ๆ มันจะดีกว่าถ้ามีเนื้อหาที่ถูกซ้อนกันด้านบน </p><br>
+                    <h4><u>Example</u></h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <td>span 1</td>
+                                <td>span 1</td>
+                                <td>span 1</td>
+                                <td>span 1</td>
+                                <td>span 1</td>
+                                <td>span 1</td>
+                                <td>span 1</td>
+                                <td>span 1</td>
+                                <td>span 1</td>
+                                <td>span 1</td>
+                                <td>span 1</td>
+                                <td>span 1</td>
+                            </tr>
+                            <tr>
+                                <td align=center colspan="4">&nbsp;span 4</td>
+                                <td align=center colspan="4">&nbsp;span 4</td>
+                                <td align=center colspan="4">&nbsp;span 4</td>
+                            </tr>
+                            <tr>
+                                <td align=center colspan="4">span 4</td>
+                                <td align=center colspan="8">span 8</td>
+                            </tr>
+                            <tr>
+                                <td align=center colspan="6">span 6</td>
+                                <td align=center colspan="6">span 6</td>
+                            </tr>
+                            <tr>
+                                <td align=center colspan="12">span 12</td>
+                            </tr>
+                        </table>
+                        <div class="alert alert-warning">
+                            <strong><h4>Tips : </h4></strong>การใช้ Grid System ใน 1 แถว จะต้องมี 12 คอลัมภ์
+                        </div>
+                        <h4><u>จากภาพข้างต้น จะได้ตัวอย่าง Code ดังนี้ </u></h4>
+                        <code>&lt;div class="row"&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-1"&gt;span 1&lt;/div&gt;</code><br>
+                        <code>&lt;/div&gt;</code><br>
+                        <code>&lt;div class="row"&gt;</code><br>
+                        <code>&lt;div class="col-md-4"&gt;span 4&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-4"&gt;span 4&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-4"&gt;span 4&lt;/div&gt;</code><br>
+                        <code>&lt;/div&gt;</code><br>
+                        <code>&lt;div class="row"&gt;</code><br>
+                        <code>&lt;div class="col-md-4"&gt;span 4&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-8"&gt;span 8&lt;/div&gt;</code><br>
+                        <code>&lt;/div&gt;</code><br>
+                        <code>&lt;div class="row"&gt;</code><br>
+                        <code>&lt;div class="col-md-6"&gt;span 6&lt;/div&gt;</code><br>
+                        <code>&lt;div class="col-md-6"&gt;span 6&lt;/div&gt;</code><br>
+                        <code>&lt;/div&gt;</code><br>
+                        <code>&lt;div class="row"&gt;</code><br>
+                        <code>&lt;div class="col-md-12"&gt;span 12&lt;/div&gt;</code><br>
+                        <code>&lt;/div&gt;</code><br>
+
+
+                    </div>
+                </div>
+
+                <div class="alert alert-success">
+                    <strong><h3>การสร้าง Grid System ?</h3></strong> <br> 1. ในการสร้าง Grid system นั้น Bootstrap แนะนำให้เราสร้างแถวและคอลัมน์ไว้ใน container โดยคลาส container ของ Bootstrap แบ่งออกเป็น 2 ประเภท คือ container และ container-fluid สำหรับ
+                    container นั้นจะแสดงผลเนื้อหาตามที่เรากำหนดความกว้างของหน้าจอ ส่วน container-fluid นั้นจะแสดงผลเนื้อหาเต็มความกว้างของหน้าจอของเรา โดยในที่นี้คือเราจะใช้คลาส container <br>
+                    <code>&lt;div class ="container"&gt;&lt;/div&gt;</code><br>
+                    <br> 2. สร้างแถวโดยใช้ class="row" ภายใต้ class="container" โดยเราสามารถที่จะสร้างแถวได้ไม่จำกัด แต่แถวเหล่านั้นต้องอยู่ภายใต้ class="container"<br>
+                    <code>&lt;div class ="container"&gt;</code><br>
+                    <code>&lt;div class ="row"&gt;&lt;/div&gt;</code><br>
+                    <code>&lt;/div&gt;</code><br>
+                    <br> 3. แต่ละแถวของ Grid system นั้นมีคอลัมน์ในแต่ละแถวได้ 12 คอลัมน์ โดยคอลัมน์ของ Grid system แบ่งออกเป็น 4 ประเภท<br><br>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <td align=center>class</td>
+                                <td align=center>ประเภทหน้าจอ</td>
+                                <td align=center>ขนาดหน้าจอ</td>
+                            </tr>
+                            <tr>
+                                <td>.col-xs-</td>
+                                <td>Smart Phone</td>
+                                <td align=center>
+                                    < 768px</td>
+
+                            </tr>
+                            <tr>
+                                <td>.col-sm-</td>
+                                <td>Tablet</td>
+                                <td align=center>>= 768px </td>
+
+
+                            </tr>
+                            <tr>
+                                <td>.col-md-</td>
+                                <td>Desktop ขนาดกลาง</td>
+                                <td align=center>>= 992px</td>
+
+                            </tr>
+                            <tr>
+                                <td>.col-lg-</td>
+                                <td>Desktop ขนาดใหญ่</td>
+                                <td align=center>>= 1200px</td>
+
+
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+
+
+                <br><br>
+
+
+
+                <h4>Leave a Comment:</h4>
+                <form role="form">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+                <br><br>
+
+                <p><span class="badge">2</span> Comments:</p><br>
+
+                <div class="row">
+                    <div class="col-sm-2 text-center">
+                        <img src="http://angsila.cs.buu.ac.th/~58160165/887371/lab01/F.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>Falook <small>Feb 7, 2017, 9:12 PM</small></h4>
+                        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <img src="http://angsila.cs.buu.ac.th/~58160165/887371/lab01/M.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>M <small>Feb 8, 2017, 8:25 PM</small></h4>
+                        <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                        <p><span class="badge">1</span> Comment:</p><br>
+                        <div class="row">
+                            <div class="col-sm-2 text-center">
+                                <img src="http://angsila.cs.buu.ac.th/~58160173/887371/lab01/cream.gif" class="img-circle" height="65" width="65" alt="Avatar">
+                            </div>
+                            <div class="col-xs-10">
+                                <h4>Cream <small>Feb 8, 2017, 8:28 PM</small></h4>
+                                <p>Me too! WOW!</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jaturapat Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        
+        .row.content {
+            height: 1500px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            background-color: lightgrey;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        #footer {
+            background-color: gold;
+            color: black;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+        #bg {
+            background-color: lightgreen;
+            color: saddlebrown;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Jaturapat Blog</h4>
+                <h5>58160165</h5>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#section1">Home</a></li>
+                    <li><a href="#section2">การใช้งาน Grid</a>
+                    </li>
+                    <li><a href="#section3">การใช้งาน Form</a></li>
+                </ul><br>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Blog..">
+                    <span class="input-group-btn">
+          <button class="btn btn-default" id ="bg" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <h5 id="footer">RECENT POSTS</h5>
+                <hr>
+                <h3>Bootstrap : การใช้งาน Form</h3>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by Jaturapat Cheunjaratsup, Feb 1, 2017.</h5>
+                <h5><span class="label label-info">Form</span></h5><br>
+                <div class="alert alert-info">
+                    <strong><h4><u>การตั้งค่าเบื้องต้นของ Form  </u></strong></h4>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;จะมีรูปแบบการควบคุมโดยอัตโนมัติ โดยรูปแบบต้นฉบับเดิมทั้งหมดมี &lt;input&gt;, &lt;textarea&gt; และ &lt;select&gt; elements ด้วย class .form การควบคุมมีความกว้าง 100%</p><br>
+                    <strong><h4><u>การจัดรูปแบบ Bootstrap มี 3 ประเภท </u></strong></h4>
+                    <p>1.รูปแบบแนวตั้ง (นี้เป็นค่าเริ่มต้น)</p>
+                    <p>2.รูปแบบแนวนอน</p>
+                    <p>3.รูปแบบอินไลน์</p>
+                    <br>
+                    <strong><h4><u>ข้อบังคับมาตรฐานสำหรับทั้ง 3 รูปแบบนี้  </u></strong></h4>
+                    <p>-ทุกๆ แท็ก html ของฟอร์มที่เราต้องการตรวจสอบค่า จะกำหนด คลาส ชื่อ "form-control css-require" เช่น<br>
+                        <code>&lt;input class="form-control css-require" name="name" type="text" id="name"  /&gt;</code></p>
+                    <p> -มีรูปแบบการควบคุม <code>&lt;div class="form-group"&gt;</code> (จำเป็นสำหรับระยะห่างที่เหมาะสม)</p>
+                    <p>-เพิ่ม class <code>.form-control</code> ทั้งหมด <code>&lt;input&gt;</code> , <code>&lt;textarea&gt;</code> และ<code>&lt;select&gt;</code>ลงใน elements </p><br>
+                </div>
+                <div class="alert alert-info">
+                    <strong><h4><u>รูปแบบ Bootstrap Form (ค่าเริ่มต้น) </u></strong></h4>
+                    <div class="container">
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox"> Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                </u><br>
+                <div class="alert alert-info">
+                    <strong><h4> <u>รูปแบบ Bootstrap Inline Form</strong></h4>
+                    </u><br>
+                    <p>-เพิ่ม class <code>.form-inline</code> ใน <code>&lt;form&gt;</code> ลง element </p><br>
+                    <div class="container">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox"> Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="alert alert-info">
+                    <strong><h4> <u>รูปแบบ Bootstrap Horizontal Form</strong></h4>
+                    </u><br>
+                    <p>-เพิ่ม class <code>.form-horizontal</code> ใน <code>&lt;form&gt;</code> ลง element</p><br>
+                    <p>-เพิ่ม class <code>.control-label</code> ทั้งหมดใน <code>&lt;label&gt;</code> ลง elements</p><br>
+                    <div class="container">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="email">Email:</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h4>Leave a Comment:</h4>
+                <form role="form">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+                <br><br>
+
+                <p><span class="badge">2</span> Comments:</p><br>
+
+                <div class="row">
+                    <div class="col-sm-2 text-center">
+                        <img src="http://angsila.cs.buu.ac.th/~58160165/887371/lab01/F.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>Falook <small>Feb 7, 2017, 9:12 PM</small></h4>
+                        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <img src="http://angsila.cs.buu.ac.th/~58160165/887371/lab01/M.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>M <small>Feb 8, 2017, 8:25 PM</small></h4>
+                        <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                        <p><span class="badge">1</span> Comment:</p><br>
+                        <div class="row">
+                            <div class="col-sm-2 text-center">
+                                <img src="http://angsila.cs.buu.ac.th/~58160173/887371/lab01/cream.gif" class="img-circle" height="65" width="65" alt="Avatar">
+                            </div>
+                            <div class="col-xs-10">
+                                <h4>Cream <small>Feb 8, 2017, 8:28 PM</small></h4>
+                                <p>Me too! WOW!</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
